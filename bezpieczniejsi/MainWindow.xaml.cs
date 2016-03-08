@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace bezpieczniejsi
 {
@@ -20,9 +21,25 @@ namespace bezpieczniejsi
     /// </summary>
     public partial class MainWindow : Window
     {
+        public RiskBank list = new RiskBank();
+        private LoadingProvider loader;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void SomeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            loader = new TextfileLoader();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == true) list = loader.loadRisks(openFileDialog.FileName);
+            SomeList.ItemsSource = list.risks;
         }
     }
 }

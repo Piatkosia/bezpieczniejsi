@@ -8,7 +8,7 @@ namespace bezpieczniejsi
 {
     public class RiskBank
     {
-        string Title;
-        List<string> risks;
+        public string Title;
+        public List<string> risks = new List<string>();
     }
 }

@@ -39,7 +39,17 @@ namespace bezpieczniejsi
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = false;
             if (openFileDialog.ShowDialog() == true) list = loader.loadRisks(openFileDialog.FileName);
-            SomeList.ItemsSource = list.risks;
+            //SomeList.ItemsSource = list.risks;
+        }
+
+        private void CloseApp_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ORZ_3s_click(object sender, RoutedEventArgs e)
+        {
+            new ThreeGrade().Show();
         }
     }
 }

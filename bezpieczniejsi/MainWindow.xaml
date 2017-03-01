@@ -3,9 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Bezpieczniejsi- okno główne" Height="350" Width="525">
     <Grid>
-        <ListBox x:Name="SomeList" HorizontalAlignment="Left" Height="212" Margin="27,37,0,0" VerticalAlignment="Top" Width="464" SelectionChanged="SomeList_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Margin="42,16,0,0" TextWrapping="Wrap" Text="Poniżej lista załadowanych zagrożeń z pliku:" VerticalAlignment="Top"/>
-        <Button Content="Załaduj listę z pliku [txt]" HorizontalAlignment="Left" Margin="27,269,0,0" VerticalAlignment="Top" Width="159" Click="Button_Click"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="299*"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="menu" >
+            <MenuItem Header="Plik">
+                <MenuItem Header="Zamknij" HorizontalAlignment="Left" Click="CloseApp_Click"/>
+            </MenuItem>
+            <MenuItem Header="Ocena ryzyka">
+                <MenuItem Header="3 stopniowa" HorizontalAlignment="Left" Click="ORZ_3s_click"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>

@@ -23,5 +23,10 @@ namespace bezpieczniejsi
         {
             InitializeComponent();
         }
+
+        private void DescTextBox_OutputChanged(object sender, StringChangedEventArgs args)
+        {
+          //tu poustawiać wartości w odpowiednie miejsca jak już powstanie klasa
+        }
     }
 }

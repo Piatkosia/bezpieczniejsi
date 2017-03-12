@@ -4,9 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bezpieczniejsi"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Metoda trójstopniowa" Height="300" Width="300">
+        Title="Metoda trójstopniowa" Height="300" Width="698.333">
+    <Window.Resources>
+        <col:ArrayList x:Key="RiskThree">
+            <col:DictionaryEntry Key="Małe" Value="0"/>
+            <col:DictionaryEntry Key="Średnie" Value="1"/>
+            <col:DictionaryEntry Key="Duże" Value="2"/>
+        </col:ArrayList>
+    </Window.Resources>
     <Grid>
-        <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"> Tu jeszcze nic nie ma:) </TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="235*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <GridSplitter Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <DataGrid x:Name="dataGrid" Margin="5" Grid.Row="2" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nr"/>
+                <DataGridTextColumn Header="Zagrożenie"/>
+                <DataGridTextColumn Header="Źródło zagrożenia"/>
+                <DataGridTextColumn Header="Możliwe skutki zagrożenia"/>
+                <DataGridTextColumn Header="Środki ochrony"/>
+                <DataGridComboBoxColumn Header="Prawdopodobieństwo"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <!--Charakterystyczne dla metody-->
+                <DataGridComboBoxColumn Header="Ciężkość następstw"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <!--Charakterystyczne dla metody-->
+                <DataGridComboBoxColumn Header="Ryzyko"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridComboBoxColumn Header="Dopuszczalność" ItemsSource="{StaticResource Acceptability}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridTextColumn Header="Uwagi"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <local:DescTextBox Margin="5" Input="Nazwa zakładu"  Grid.Row="0" Grid.Column="0" OutputChanged="DescTextBox_OutputChanged"/>
+        <local:DescTextBox Margin="5" Input="Nazwa stanowiska" Grid.Row="0" Grid.Column="1" OutputChanged="DescTextBox_OutputChanged"/>
     </Grid>
 </Window>

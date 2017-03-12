@@ -54,12 +54,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DescTextBox.xaml.cs">
+      <DependentUpon>DescTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EA\StringChangedEventArgs.cs" />
     <Compile Include="LoadingProvider.cs" />
+    <Compile Include="Models\RiskAssessment.cs" />
+    <Compile Include="Models\RiskAssessmentRowModel.cs" />
+    <Compile Include="Models\ThreeGradeRiskAssessmentRowModel.cs" />
     <Compile Include="RiskBank.cs" />
     <Compile Include="TextfileLoader.cs" />
     <Compile Include="windows\ThreeGrade.xaml.cs">
       <DependentUpon>ThreeGrade.xaml</DependentUpon>
     </Compile>
+    <Page Include="DescTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

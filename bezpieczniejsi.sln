@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bezpieczniejsi", "bezpieczniejsi\bezpieczniejsi.csproj", "{F859A8E3-6160-45B8-B985-FBDFE8A06B4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiatToolkit", "PiatToolkit\PiatToolkit.csproj", "{5A882944-66B1-4C39-A6E4-31A92B428D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiatToolkitWPF", "PiatToolkitWPF\PiatToolkitWPF.csproj", "{CA691772-082B-4598-9BDA-46594E65A008}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F859A8E3-6160-45B8-B985-FBDFE8A06B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F859A8E3-6160-45B8-B985-FBDFE8A06B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F859A8E3-6160-45B8-B985-FBDFE8A06B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A882944-66B1-4C39-A6E4-31A92B428D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A882944-66B1-4C39-A6E4-31A92B428D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A882944-66B1-4C39-A6E4-31A92B428D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A882944-66B1-4C39-A6E4-31A92B428D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA691772-082B-4598-9BDA-46594E65A008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA691772-082B-4598-9BDA-46594E65A008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA691772-082B-4598-9BDA-46594E65A008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA691772-082B-4598-9BDA-46594E65A008}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

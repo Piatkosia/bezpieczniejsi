@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace bezpieczniejsi
+namespace bezpieczniejsi.Models
 {
     public class RiskAssessmentRowModel : INotifyPropertyChanged
     {
@@ -46,7 +40,7 @@ namespace bezpieczniejsi
             }
         }
 
-        private string _riskSource;
+        private string _riskSource; //źródło
 
         public string RiskSource
         {
@@ -92,7 +86,7 @@ namespace bezpieczniejsi
                 }
             }
         }
-        private bool _acceptability;
+        private bool _acceptability; //dopuszczaoność
 
         public bool Acceptability
         {

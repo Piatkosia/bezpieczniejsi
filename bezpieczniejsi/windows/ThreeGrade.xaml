@@ -1,10 +1,11 @@
-﻿<Window x:Class="bezpieczniejsi.ThreeGrade"
+﻿<Window x:Class="bezpieczniejsi.windows.ThreeGrade"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bezpieczniejsi"
         xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:piatToolkitWpf="clr-namespace:PiatToolkitWPF;assembly=PiatToolkitWPF"
         mc:Ignorable="d"
         Title="Metoda trójstopniowa" Height="300" Width="698.333">
     <Window.Resources>
@@ -41,7 +42,7 @@
                 <DataGridTextColumn Header="Uwagi"/>
             </DataGrid.Columns>
         </DataGrid>
-        <local:DescTextBox Margin="5" Input="Nazwa zakładu"  Grid.Row="0" Grid.Column="0" OutputChanged="DescTextBox_OutputChanged"/>
-        <local:DescTextBox Margin="5" Input="Nazwa stanowiska" Grid.Row="0" Grid.Column="1" OutputChanged="DescTextBox_OutputChanged"/>
+        <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa zakładu"  Grid.Row="0" Grid.Column="0" OutputChanged="DescTextBox_OutputChanged"/>
+        <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa stanowiska" Grid.Row="0" Grid.Column="1" OutputChanged="DescTextBox_OutputChanged"/>
     </Grid>
 </Window>

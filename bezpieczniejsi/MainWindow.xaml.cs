@@ -49,7 +49,7 @@ namespace bezpieczniejsi
 
         private void ORZ_3s_click(object sender, RoutedEventArgs e)
         {
-            new ThreeGrade().Show();
+            new windows.ThreeGrade().Show();
         }
     }
 }

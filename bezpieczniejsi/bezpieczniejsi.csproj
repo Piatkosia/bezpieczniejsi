@@ -58,12 +58,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="LoadingProvider.cs" />
+    <Compile Include="Models\IRiskAssessment.cs" />
+    <Compile Include="Models\RAHeader.cs" />
     <Compile Include="Models\RiskAssessment.cs" />
     <Compile Include="Models\RiskAssessmentRowModel.cs" />
+    <Compile Include="Models\ThreeGradeRA.cs" />
     <Compile Include="Models\ThreeGradeRiskAssessmentRowModel.cs" />
     <Compile Include="RiskBank.cs" />
     <Compile Include="TextfileLoader.cs" />
-    <Compile Include="windows\ThreeGrade.xaml.cs">
+    <Compile Include="Windows\ThreeGrade.xaml.cs">
       <DependentUpon>ThreeGrade.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -78,7 +81,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="windows\ThreeGrade.xaml">
+    <Page Include="Windows\ThreeGrade.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

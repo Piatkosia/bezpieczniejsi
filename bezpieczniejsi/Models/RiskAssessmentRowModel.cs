@@ -1,18 +1,18 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace bezpieczniejsi.Models
+namespace bezpieczniejsi
 {
     public class RiskAssessmentRowModel : INotifyPropertyChanged
     {
-        public RiskAssessment Parent { get; set; }
+        public IRiskAssessment Parent { get; set; }
 
         public int Id
         {
             get
             {
-                if (Parent == null) return 0;
-                return Parent.IndexOf(this);
+                if (Parent == null) return -1;
+                return Parent.GetChildID(this);
             }
           
         }
@@ -95,8 +95,7 @@ namespace bezpieczniejsi.Models
             {
                 if(_acceptability != value)
                 {
-                    _acceptability = value;
-                    OnPropertyChanged("Acceptability");
+                    _acceptability = value;OnPropertyChanged("Acceptability");
                 }
             }
         }

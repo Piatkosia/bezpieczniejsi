@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace PiatToolkitWPF
@@ -26,8 +27,31 @@ namespace PiatToolkitWPF
         public static readonly DependencyProperty InputProperty =
             DependencyProperty.Register("Input", typeof(string), typeof(DescTextBox), new PropertyMetadata(string.Empty, InputValueChanged));
 
+
+
+        public string Output
+        {
+            get { return (string)GetValue(OutputProperty); }
+            set { SetValue(OutputProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Output.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty OutputProperty =
+            DependencyProperty.Register("Output", typeof(string), typeof(DescTextBox), new PropertyMetadata(string.Empty, OutputValueChanged));
+
+        private static void OutputValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (e == null) return;
+            if (e.NewValue == null) return;
+            var control = d as DescTextBox;
+            if (control == null) return;
+            control.OutputBox.Text = e.NewValue.ToString();
+        }
+
         private static void InputValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
+            if (e == null) return;
+            if (e.NewValue == null) return;
             var control = d as DescTextBox;
             if (control == null) return;
             control.InputBox.Text = e.NewValue.ToString();

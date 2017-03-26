@@ -1,23 +1,22 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 
-namespace bezpieczniejsi.Models
+namespace bezpieczniejsi
 {
-    public class RiskAssessment: BindingList<RiskAssessmentRowModel>
-    {
-        private string _companyName;
+    public class RiskAssessment<T> : BindingList<T>, IRiskAssessment where T : RiskAssessmentRowModel, new()
 
-        public string CompanyName
+    {
+    public RAHeader Header { get; set; } = new RAHeader();
+
+        public virtual int GetChildID(object obj)
         {
-            get { return _companyName; }
-            set { _companyName = value; }
+            throw new NotSupportedException("Ale użyj jakiejś konkretniejszej klasy");
         }
 
-        private string _jobName;
-
-        public string JobName
+        protected override void InsertItem(int index, T item)
         {
-            get { return _jobName; }
-            set { _jobName = value; }
+            item.Parent = this;
+            base.InsertItem(index, item);
         }
     }
 }

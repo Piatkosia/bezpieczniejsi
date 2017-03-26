@@ -46,10 +46,11 @@ namespace bezpieczniejsi
         {
             this.Close();
         }
+        ThreeGradeRa TestRA = new ThreeGradeRa();
 
         private void ORZ_3s_click(object sender, RoutedEventArgs e)
         {
-            new windows.ThreeGrade().Show();
+            new ThreeGrade(TestRA).Show(); //na razie niech się sobie powtarza
         }
     }
 }

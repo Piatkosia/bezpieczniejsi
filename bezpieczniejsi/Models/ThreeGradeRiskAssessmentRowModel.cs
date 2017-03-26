@@ -1,18 +1,27 @@
-﻿namespace bezpieczniejsi.Models
+﻿using System;
+
+namespace bezpieczniejsi
 {
     public class ThreeGradeRiskRowAssessmentModel : RiskAssessmentRowModel
     {
-        private Probability _threeProbability;
+        private ThreeStageRiskScoreVale _probability;
 
-        public Probability ThreeProbability  
+        public ThreeStageRiskScoreVale ThreeProbability  
         {
-            get { return _threeProbability; }
-            set { _threeProbability = value; }
+            get { return _probability; }
+            set { _probability = value; }
         }
 
+        private ThreeStageRiskScoreVale _consequencesSeverity; //ciężkość następstw
+
+        public ThreeStageRiskScoreVale ConsequencesSeverity
+        {
+            get { return _consequencesSeverity; }
+            set { _consequencesSeverity = value; }
+        }
     }
 
-    public enum Probability
+    public enum ThreeStageRiskScoreVale
     {
         Rare = 0,
         Medium = 1,

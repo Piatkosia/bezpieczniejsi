@@ -6,7 +6,14 @@ namespace bezpieczniejsi
     {
         private ThreeStageRiskScoreVale _probability;
 
-        public ThreeStageRiskScoreVale ThreeProbability  
+        public override int PropNum
+        {
+            get
+            {
+                return base.PropNum + 2;
+            }
+        }
+        public ThreeStageRiskScoreVale ThreeProbability
         {
             get { return _probability; }
             set { _probability = value; }

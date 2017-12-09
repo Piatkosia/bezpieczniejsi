@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace bezpieczniejsi
@@ -7,6 +8,14 @@ namespace bezpieczniejsi
     {
         public IRiskAssessment Parent { get; set; }
 
+        public virtual int PropNum
+        {
+            get
+            {
+                return 7;
+            }
+        }
+
         public int Id
         {
             get
@@ -14,7 +23,7 @@ namespace bezpieczniejsi
                 if (Parent == null) return -1;
                 return Parent.GetChildID(this);
             }
-          
+
         }
         private string _threat; //zagrożenie
 
@@ -52,7 +61,7 @@ namespace bezpieczniejsi
                     _riskSource = value;
                     OnPropertyChanged("RiskSource");
                 }
-               
+
             }
         }
 
@@ -68,7 +77,7 @@ namespace bezpieczniejsi
                     _riskEffects = value;
                     OnPropertyChanged("RiskEffects");
                 }
-                
+
             }
         }
 
@@ -93,13 +102,27 @@ namespace bezpieczniejsi
             get { return _acceptability; }
             set
             {
-                if(_acceptability != value)
+                if (_acceptability != value)
                 {
-                    _acceptability = value;OnPropertyChanged("Acceptability");
+                    _acceptability = value;
+                    OnPropertyChanged("Acceptability");
                 }
             }
         }
-
+        public List<string> Headers = new List<string>()
+        {
+            "Id","Zagrożenie","","","","","","",
+            "","","","","","","","",
+            "","","","","","","","", //później tu się doda zależne od lokalizacji nazwy 
+        };
+        public virtual List<string> GetPrintableParameters()
+        {
+            List<string> parameters = new List<string>();
+            parameters.Add(Id.ToString());
+            parameters.Add(Threat);
+            //parameters.Add(); //i pododawaj następne jak ci się będzie nudzić.
+            return parameters;
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

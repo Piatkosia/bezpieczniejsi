@@ -31,10 +31,10 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nr"  Binding="{Binding Path=Id}" IsReadOnly="True" />
                 <DataGridTextColumn Header="Zagrożenie" Binding="{Binding Path=Threat}" />
-                <DataGridTextColumn Header="Źródło zagrożenia"/>
-                <DataGridTextColumn Header="Możliwe skutki zagrożenia"/>
-                <DataGridTextColumn Header="Środki ochrony"/>
-                <DataGridComboBoxColumn Header="Prawdopodobieństwo"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridTextColumn Header="Źródło zagrożenia" Binding="{Binding Path=RiskSource}"/>
+                <DataGridTextColumn Header="Możliwe skutki zagrożenia" Binding="{Binding Path=RiskEffects}"/>
+                <DataGridTextColumn Header="Środki ochrony" Binding="{Binding Path=PersonalProtection}"/>
+                <DataGridComboBoxColumn Header="Prawdopodobieństwo"  ItemsSource="{StaticResource RiskThree}" SelectedValueBinding="{Binding Path=ThreeProbability}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
                 <!--Charakterystyczne dla metody-->
                 <DataGridComboBoxColumn Header="Ciężkość następstw"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
                 <!--Charakterystyczne dla metody-->

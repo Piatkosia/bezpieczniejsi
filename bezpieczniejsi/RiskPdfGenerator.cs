@@ -13,10 +13,13 @@ namespace bezpieczniejsi
         public bool SaveAsPdf<T>(RiskAssessment<T> Ra, string path) where T : RiskAssessmentRowModel, new()
         {
             PdfPTable table = new PdfPTable(Ra.PropNum);
-
+            //Tu dodać potem ładny header
             foreach (T item in Ra)
             {
-                item.GetPrintableParameters();
+                foreach (string parameter in item.GetPrintableParameters())
+                {
+                    table.AddCell(parameter);
+                }
             }
             return false;
         }

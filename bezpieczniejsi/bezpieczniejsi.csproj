@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\RiskTreeValueToThreeStageRiskScoreValeConverter.cs" />
     <Compile Include="LoadingProvider.cs" />
     <Compile Include="Models\IRiskAssessment.cs" />
     <Compile Include="Models\RAHeader.cs" />

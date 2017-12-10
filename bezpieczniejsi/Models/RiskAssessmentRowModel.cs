@@ -21,7 +21,7 @@ namespace bezpieczniejsi
             get
             {
                 if (Parent == null) return -1;
-                return Parent.GetChildID(this);
+                return Parent.GetChildID(this) + 1; //od 0 nieintuicyjnie dla nietechnicznych wyglądało.
             }
 
         }

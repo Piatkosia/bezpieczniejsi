@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bezpieczniejsi"
+        xmlns:convs="clr-namespace:bezpieczniejsi.Converters"
         xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         xmlns:piatToolkitWpf="clr-namespace:PiatToolkitWPF;assembly=PiatToolkitWPF"
         mc:Ignorable="d"
@@ -14,6 +15,7 @@
             <col:DictionaryEntry Key="Średnie" Value="1"/>
             <col:DictionaryEntry Key="Duże" Value="2"/>
         </col:ArrayList>
+        <convs:RiskTreeValueToThreeStageRiskScoreValeConverter x:Key="To3sRS"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -34,12 +36,12 @@
                 <DataGridTextColumn Header="Źródło zagrożenia" Binding="{Binding Path=RiskSource}"/>
                 <DataGridTextColumn Header="Możliwe skutki zagrożenia" Binding="{Binding Path=RiskEffects}"/>
                 <DataGridTextColumn Header="Środki ochrony" Binding="{Binding Path=PersonalProtection}"/>
-                <DataGridComboBoxColumn Header="Prawdopodobieństwo"  ItemsSource="{StaticResource RiskThree}" SelectedValueBinding="{Binding Path=ThreeProbability}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridComboBoxColumn Header="Prawdopodobieństwo"  ItemsSource="{StaticResource RiskThree}" SelectedValueBinding="{Binding Path=ThreeProbability, Converter={StaticResource To3sRS}}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
                 <!--Charakterystyczne dla metody-->
-                <DataGridComboBoxColumn Header="Ciężkość następstw"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridComboBoxColumn Header="Ciężkość następstw"  ItemsSource="{StaticResource RiskThree}" SelectedValueBinding="{Binding Path=ConsequencesSeverity, Converter={StaticResource To3sRS}}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
                 <!--Charakterystyczne dla metody-->
-                <DataGridComboBoxColumn Header="Ryzyko"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
-                <DataGridComboBoxColumn Header="Dopuszczalność" ItemsSource="{StaticResource Acceptability}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridComboBoxColumn Header="Ryzyko" IsReadOnly="True"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridComboBoxColumn Header="Dopuszczalność" IsReadOnly="True" ItemsSource="{StaticResource Acceptability}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
                 <DataGridTextColumn Header="Uwagi"/>
             </DataGrid.Columns>
         </DataGrid>

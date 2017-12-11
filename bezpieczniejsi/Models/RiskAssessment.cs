@@ -7,6 +7,7 @@ namespace bezpieczniejsi
 
     {
         public RAHeader Header { get; set; } = new RAHeader();
+        public string JobDescription { get; set; }
 
         public int PropNum = new T().PropNum;
 

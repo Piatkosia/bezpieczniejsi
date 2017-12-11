@@ -25,11 +25,12 @@
             <RowDefinition Height="34*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition />
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <GridSplitter Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <DataGrid x:Name="dataGrid" Margin="5" Grid.Row="2" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" >
+        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <DataGrid x:Name="dataGrid" Margin="5" Grid.Row="2" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nr"  Binding="{Binding Path=Id}" IsReadOnly="True" />
                 <DataGridTextColumn Header="Zagrożenie" Binding="{Binding Path=Threat}" />
@@ -47,12 +48,13 @@
         </DataGrid>
         <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa zakładu"  Grid.Row="0" Grid.Column="0" OutputChanged="DescTextBox_OutputChanged" x:Name="CompN"/>
         <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa stanowiska" Grid.Row="0" Grid.Column="1" OutputChanged="DescTextBox_OutputChanged" x:Name="WorkN"/>
+        <Button x:Name="DescButton" Margin="5" Grid.Row="0" Grid.Column="2" Content=" Opis stanowiska" Click="DescButton_Click"/>
         <Grid Grid.Column="1" Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition />
                 <ColumnDefinition />
-                
+
             </Grid.ColumnDefinitions>
             <Button x:Name="PrintButton" Content="Drukuj" Margin="5" Click="PrintButton_Click"/>
             <Button x:Name="CloseButton" Content="Zamknij" Margin="5" Grid.Column="1"/>

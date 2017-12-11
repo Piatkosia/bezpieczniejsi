@@ -1,0 +1,34 @@
+﻿<Window x:Class="bezpieczniejsi.RTFStringEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bezpieczniejsi"
+        mc:Ignorable="d"
+        Title="RTFStringEditor" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="118*"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <RichTextBox x:Name="richTextBox">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="saveButton" Content="Zapisz" Grid.Column="0" Click="saveButton_Click"/>
+            <Button x:Name="CancelButton" Content="Anuluj" Grid.Column="1" Click="CancelButton_Click"/>
+        </Grid>
+
+
+        
+
+    </Grid>
+</Window>

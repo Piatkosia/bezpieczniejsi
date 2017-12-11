@@ -50,7 +50,9 @@ namespace bezpieczniejsi
 
         private void ORZ_3s_click(object sender, RoutedEventArgs e)
         {
-            new ThreeGrade(TestRA).Show(); //na razie niech się sobie powtarza
+            var wnd = new ThreeGrade(TestRA);
+            wnd.Owner = this;
+            wnd.Show(); //na razie niech się sobie powtarza
         }
     }
 }

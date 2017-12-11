@@ -47,5 +47,13 @@ namespace bezpieczniejsi
             WpfPrinting printing = new WpfPrinting();
             printing.PrintDataGrid(null, dataGrid, null, pr); //potem dodam nagłówek i stopkę
         }
+
+        private void DescButton_Click(object sender, RoutedEventArgs e)
+        {
+            RTFStringEditor editor = new RTFStringEditor(valueToRead.JobDescription);
+            editor.Owner = this;
+            editor.ShowDialog();
+            valueToRead.JobDescription = editor.EditedString;
+        }
     }
 }

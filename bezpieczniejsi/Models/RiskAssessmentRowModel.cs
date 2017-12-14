@@ -115,6 +115,8 @@ namespace bezpieczniejsi
             "","","","","","","","",
             "","","","","","","","", //później tu się doda zależne od lokalizacji nazwy 
         };
+        private string _comments;
+
         public virtual List<string> GetPrintableParameters()
         {
             List<string> parameters = new List<string>();
@@ -123,6 +125,21 @@ namespace bezpieczniejsi
             //parameters.Add(); //i pododawaj następne jak ci się będzie nudzić.
             return parameters;
         }
+
+        public string Comments
+        {
+            get { return _comments; }
+            set
+            {
+                if (_comments != value)
+                {
+                    _comments = value;
+                    OnPropertyChanged("Comments");
+                }
+
+            }
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

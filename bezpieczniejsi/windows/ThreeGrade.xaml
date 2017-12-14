@@ -16,6 +16,8 @@
             <col:DictionaryEntry Key="Duże" Value="2"/>
         </col:ArrayList>
         <convs:RiskTreeValueToThreeStageRiskScoreValeConverter x:Key="To3sRS"/>
+        <convs:RiskThreeToReturnString x:Key="ThreeRet"/>
+        <convs:BoolToAcceptabilityTextConverter x:Key="Acc"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -37,13 +39,13 @@
                 <DataGridTextColumn Header="Źródło zagrożenia" Binding="{Binding Path=RiskSource}"/>
                 <DataGridTextColumn Header="Możliwe skutki zagrożenia" Binding="{Binding Path=RiskEffects}"/>
                 <DataGridTextColumn Header="Środki ochrony" Binding="{Binding Path=PersonalProtection}"/>
-                <DataGridComboBoxColumn Header="Prawdopodobieństwo"  ItemsSource="{StaticResource RiskThree}" SelectedValueBinding="{Binding Path=ThreeProbability, Converter={StaticResource To3sRS}}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridComboBoxColumn Header="Prawdopodobieństwo"  ItemsSource="{StaticResource RiskThree}" SelectedValueBinding="{Binding Path=ThreeProbability, Converter={StaticResource To3sRS}, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Key" SelectedValuePath="Value" />
                 <!--Charakterystyczne dla metody-->
-                <DataGridComboBoxColumn Header="Ciężkość następstw"  ItemsSource="{StaticResource RiskThree}" SelectedValueBinding="{Binding Path=ConsequencesSeverity, Converter={StaticResource To3sRS}}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+                <DataGridComboBoxColumn Header="Ciężkość następstw"  ItemsSource="{StaticResource RiskThree}" SelectedValueBinding="{Binding Path=ConsequencesSeverity, Converter={StaticResource To3sRS},UpdateSourceTrigger =PropertyChanged}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
                 <!--Charakterystyczne dla metody-->
-                <DataGridComboBoxColumn Header="Ryzyko" IsReadOnly="True"  ItemsSource="{StaticResource RiskThree}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
-                <DataGridComboBoxColumn Header="Dopuszczalność" IsReadOnly="True" ItemsSource="{StaticResource Acceptability}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
-                <DataGridTextColumn Header="Uwagi"/>
+                <DataGridTextColumn Header="Ryzyko" IsReadOnly="True" Binding="{Binding Path=Risk, Converter={StaticResource ThreeRet}}"/>
+                <DataGridTextColumn Header="Dopuszczalność" IsReadOnly="True"  Binding="{Binding Path=Acceptability, Converter={StaticResource Acc}}"/>
+                <DataGridTextColumn Header="Uwagi" Binding="{Binding Path=Comments}"/>
             </DataGrid.Columns>
         </DataGrid>
         <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa zakładu"  Grid.Row="0" Grid.Column="0" OutputChanged="DescTextBox_OutputChanged" x:Name="CompN"/>

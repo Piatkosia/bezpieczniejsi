@@ -6,13 +6,33 @@
         <blocks />
         <tabs>
           <DocumentTab>
-            <name>RiskTreeValueToThreeStageRiskScoreValeConverter.cs</name>
-            <path>bezpieczniejsi\Converters\RiskTreeValueToThreeStageRiskScoreValeConverter.cs</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\Converters\RiskTreeValueToThreeStageRiskScoreValeConverter.cs</absolutePath>
+            <name>ThreeGrade.xaml.cs</name>
+            <path>bezpieczniejsi\Windows\ThreeGrade.xaml.cs</path>
+            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\Windows\ThreeGrade.xaml.cs</absolutePath>
             <position>
-              <line>29</line>
-              <column>24</column>
-              <lineHash>pZEeldwZ8aQWqwHVWAhAjIJzMaqr/kjdhM3Pv/AupEM=</lineHash>
+              <line>54</line>
+              <column>31</column>
+              <lineHash>zJz0gendlkT9FDTbmJ1wio3u8U2996VBeTfWjT0eTSU=</lineHash>
+            </position>
+          </DocumentTab>
+          <DocumentTab>
+            <name>RTFStringEditor.xaml</name>
+            <path>bezpieczniejsi\windows\rtfstringeditor.xaml</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\windows\rtfstringeditor.xaml</absolutePath>
+            <position>
+              <line>1</line>
+              <column>33</column>
+              <lineHash>JtrqQ4wjIDuPSeccNgsnPUiPGgyDCLQReHppPJAs3cU=</lineHash>
+            </position>
+          </DocumentTab>
+          <DocumentTab>
+            <name>RTFStringEditor.xaml.cs</name>
+            <path>bezpieczniejsi\windows\rtfstringeditor.xaml.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\windows\rtfstringeditor.xaml.cs</absolutePath>
+            <position>
+              <line>43</line>
+              <column>21</column>
+              <lineHash>/enx/jY4lbqBAO082ZWCdh1ekJ/BLR9G0Pgcx2Ux1Aw=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
@@ -20,69 +40,54 @@
             <path>bezpieczniejsi\windows\threegrade.xaml</path>
             <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\windows\threegrade.xaml</absolutePath>
             <position>
-              <line>51</line>
-              <column>10</column>
-              <lineHash>TX+EcTUOhBOlBlhMzMgwtL8He66FfmPBpDsZ/xvlfJg=</lineHash>
+              <line>18</line>
+              <column>63</column>
+              <lineHash>MReRhww2zgGAaOaQVIINk0D1Mz4dwmqg8IO/cLc9yOQ=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>RiskBank.cs</name>
-            <path>bezpieczniejsi\riskbank.cs</path>
-            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\riskbank.cs</absolutePath>
+            <name>RiskAssessment.cs</name>
+            <path>bezpieczniejsi\models\riskassessment.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\models\riskassessment.cs</absolutePath>
             <position>
-              <line>15</line>
+              <line>27</line>
               <column>1</column>
               <lineHash>ECtRuXZaVqPomffPDuOOUlH5xQOzV7MwpJGD63sVVgQ=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>RiskPdfGenerator.cs</name>
-            <path>bezpieczniejsi\riskpdfgenerator.cs</path>
-            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\riskpdfgenerator.cs</absolutePath>
+            <name>RAHeader.cs</name>
+            <path>bezpieczniejsi\models\raheader.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\models\raheader.cs</absolutePath>
             <position>
-              <line>37</line>
-              <column>49</column>
-              <lineHash>0CjJ4fpHNbUEoseXAFd9zfMHDIqC5yb2C42T4aqBE7k=</lineHash>
+              <line>1</line>
+              <column>1</column>
+              <lineHash>+C3wS7Ft5DyHeLCyPV9r1wsaOWkxFdQYa1IzhmbnvNw=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>ThreeGradeRiskAssessmentRowModel.cs</name>
-            <path>bezpieczniejsi\models\threegraderiskassessmentrowmodel.cs</path>
-            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\models\threegraderiskassessmentrowmodel.cs</absolutePath>
+            <name>MainWindow.xaml.cs</name>
+            <path>bezpieczniejsi\mainwindow.xaml.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\mainwindow.xaml.cs</absolutePath>
             <position>
-              <line>25</line>
-              <column>10</column>
-              <lineHash>ykKUv9CRqXFB28iGGHxkiLH9tlfMTvxW2qWsuJpGHLY=</lineHash>
+              <line>51</line>
+              <column>68</column>
+              <lineHash>hr+q6QjZLi5iOmGZ2yeTGWQ7Hj9G/3QflTAUivszJqE=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>ThreeGradeRA.cs</name>
-            <path>bezpieczniejsi\models\threegradera.cs</path>
-            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\models\threegradera.cs</absolutePath>
-            <position>
-              <line>10</line>
-              <column>30</column>
-              <lineHash>EeokaVMc8++Jy8jirjmLbq/b/D+H3xevczO2bGlxnhI=</lineHash>
-            </position>
+            <name>packages.config</name>
+            <path>bezpieczniejsi\packages.config</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\packages.config</absolutePath>
           </DocumentTab>
           <DocumentTab>
-            <name>RiskAssessmentRowModel.cs</name>
-            <path>bezpieczniejsi\models\riskassessmentrowmodel.cs</path>
-            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\models\riskassessmentrowmodel.cs</absolutePath>
+            <name>TextfileLoader.cs</name>
+            <path>bezpieczniejsi\textfileloader.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\textfileloader.cs</absolutePath>
             <position>
-              <line>118</line>
-              <column>59</column>
-              <lineHash>KJ0qtyE1arQJMDj+vatEUHFHI8J/U4TSLV9YznkJBVs=</lineHash>
-            </position>
-          </DocumentTab>
-          <DocumentTab>
-            <name>MainWindow.xaml</name>
-            <path>bezpieczniejsi\mainwindow.xaml</path>
-            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\mainwindow.xaml</absolutePath>
-            <position>
-              <line>15</line>
-              <column>88</column>
-              <lineHash>mDr5HYySSw8KKIAJzWi7hlXlf5eJ4NWkhI7qwI/ta4Q=</lineHash>
+              <line>1</line>
+              <column>1</column>
+              <lineHash>+C3wS7Ft5DyHeLCyPV9r1wsaOWkxFdQYa1IzhmbnvNw=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
@@ -96,78 +101,73 @@
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>TextfileLoader.cs</name>
-            <path>bezpieczniejsi\TextfileLoader.cs</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\TextfileLoader.cs</absolutePath>
+            <name>MainWindow.xaml</name>
+            <path>bezpieczniejsi\mainwindow.xaml</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\mainwindow.xaml</absolutePath>
             <position>
-              <line>1</line>
-              <column>1</column>
-              <lineHash>+C3wS7Ft5DyHeLCyPV9r1wsaOWkxFdQYa1IzhmbnvNw=</lineHash>
+              <line>15</line>
+              <column>88</column>
+              <lineHash>mDr5HYySSw8KKIAJzWi7hlXlf5eJ4NWkhI7qwI/ta4Q=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>packages.config</name>
-            <path>bezpieczniejsi\packages.config</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\packages.config</absolutePath>
-          </DocumentTab>
-          <DocumentTab>
-            <name>MainWindow.xaml.cs</name>
-            <path>bezpieczniejsi\MainWindow.xaml.cs</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\MainWindow.xaml.cs</absolutePath>
+            <name>RiskAssessmentRowModel.cs</name>
+            <path>bezpieczniejsi\models\riskassessmentrowmodel.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\models\riskassessmentrowmodel.cs</absolutePath>
             <position>
-              <line>51</line>
-              <column>68</column>
-              <lineHash>hr+q6QjZLi5iOmGZ2yeTGWQ7Hj9G/3QflTAUivszJqE=</lineHash>
+              <line>118</line>
+              <column>59</column>
+              <lineHash>KJ0qtyE1arQJMDj+vatEUHFHI8J/U4TSLV9YznkJBVs=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>RAHeader.cs</name>
-            <path>bezpieczniejsi\Models\RAHeader.cs</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\Models\RAHeader.cs</absolutePath>
+            <name>ThreeGradeRA.cs</name>
+            <path>bezpieczniejsi\models\threegradera.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\models\threegradera.cs</absolutePath>
             <position>
-              <line>1</line>
-              <column>1</column>
-              <lineHash>+C3wS7Ft5DyHeLCyPV9r1wsaOWkxFdQYa1IzhmbnvNw=</lineHash>
+              <line>10</line>
+              <column>30</column>
+              <lineHash>EeokaVMc8++Jy8jirjmLbq/b/D+H3xevczO2bGlxnhI=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>RiskAssessment.cs</name>
-            <path>bezpieczniejsi\Models\RiskAssessment.cs</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\Models\RiskAssessment.cs</absolutePath>
+            <name>ThreeGradeRiskAssessmentRowModel.cs</name>
+            <path>bezpieczniejsi\models\threegraderiskassessmentrowmodel.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\models\threegraderiskassessmentrowmodel.cs</absolutePath>
             <position>
-              <line>27</line>
+              <line>25</line>
+              <column>10</column>
+              <lineHash>ykKUv9CRqXFB28iGGHxkiLH9tlfMTvxW2qWsuJpGHLY=</lineHash>
+            </position>
+          </DocumentTab>
+          <DocumentTab>
+            <name>RiskPdfGenerator.cs</name>
+            <path>bezpieczniejsi\riskpdfgenerator.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\riskpdfgenerator.cs</absolutePath>
+            <position>
+              <line>37</line>
+              <column>49</column>
+              <lineHash>0CjJ4fpHNbUEoseXAFd9zfMHDIqC5yb2C42T4aqBE7k=</lineHash>
+            </position>
+          </DocumentTab>
+          <DocumentTab>
+            <name>RiskBank.cs</name>
+            <path>bezpieczniejsi\riskbank.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\riskbank.cs</absolutePath>
+            <position>
+              <line>15</line>
               <column>1</column>
               <lineHash>ECtRuXZaVqPomffPDuOOUlH5xQOzV7MwpJGD63sVVgQ=</lineHash>
             </position>
           </DocumentTab>
           <DocumentTab>
-            <name>Windows\ThreeGrade.xaml.cs</name>
-            <path>bezpieczniejsi\Windows\ThreeGrade.xaml.cs</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\Windows\ThreeGrade.xaml.cs</absolutePath>
+            <name>RiskTreeValueToThreeStageRiskScoreValeConverter.cs</name>
+            <path>bezpieczniejsi\converters\risktreevaluetothreestageriskscorevaleconverter.cs</path>
+            <absolutePath>c:\users\piatk\source\repos\bezpieczniejsi\bezpieczniejsi\converters\risktreevaluetothreestageriskscorevaleconverter.cs</absolutePath>
             <position>
-              <line>54</line>
-              <column>1</column>
-              <lineHash>QqKbj+5rvocuXtcf4j44LL8s8eXA5U069DrZfx/b/DI=</lineHash>
-            </position>
-          </DocumentTab>
-          <DocumentTab>
-            <name>RTFStringEditor.xaml</name>
-            <path>bezpieczniejsi\Windows\RTFStringEditor.xaml</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\Windows\RTFStringEditor.xaml</absolutePath>
-            <position>
-              <line>4</line>
-              <column>25</column>
-              <lineHash>fhsLpnqz/6JFSBIwFazh2+T26Ewkg4sopmHUu5IGcxk=</lineHash>
-            </position>
-          </DocumentTab>
-          <DocumentTab>
-            <name>RTFStringEditor.xaml.cs</name>
-            <path>bezpieczniejsi\Windows\RTFStringEditor.xaml.cs</path>
-            <absolutePath>C:\Users\piatk\Source\Repos\bezpieczniejsi\bezpieczniejsi\Windows\RTFStringEditor.xaml.cs</absolutePath>
-            <position>
-              <line>20</line>
-              <column>33</column>
-              <lineHash>EkdU876xdwfpzH6RMA/NySBM3O29Go+Zlm+PoQ8aOfY=</lineHash>
+              <line>29</line>
+              <column>24</column>
+              <lineHash>pZEeldwZ8aQWqwHVWAhAjIJzMaqr/kjdhM3Pv/AupEM=</lineHash>
             </position>
           </DocumentTab>
         </tabs>

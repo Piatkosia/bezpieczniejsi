@@ -53,6 +53,7 @@ namespace bezpieczniejsi
             RTFStringEditor editor = new RTFStringEditor(valueToRead.JobDescription);
             editor.Owner = this;
             editor.ShowDialog();
+            editor.Title = valueToRead.Header.CompanyName + " : " + valueToRead.Header.JobName;
             valueToRead.JobDescription = editor.EditedString;
         }
     }

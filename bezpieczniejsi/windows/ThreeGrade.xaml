@@ -51,16 +51,18 @@
         <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa zakładu"  Grid.Row="0" Grid.Column="0" OutputChanged="DescTextBox_OutputChanged" x:Name="CompN"/>
         <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa stanowiska" Grid.Row="0" Grid.Column="1" OutputChanged="DescTextBox_OutputChanged" x:Name="WorkN"/>
         <Button x:Name="DescButton" Margin="5" Grid.Row="0" Grid.Column="2" Content=" Opis stanowiska" Click="DescButton_Click"/>
-        <Grid Grid.Column="1" Grid.Row="3">
+        <Grid Grid.ColumnSpan="3" Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
+                <ColumnDefinition />
                 <ColumnDefinition />
                 <ColumnDefinition />
 
             </Grid.ColumnDefinitions>
             <Button x:Name="PrintButton" Content="Drukuj" Margin="5" Click="PrintButton_Click"/>
-            <Button x:Name="CloseButton" Content="Zamknij" Margin="5" Grid.Column="1"/>
-            <Button x:Name="ClearButton" Content="Wyczyść" Margin="5" Grid.Column="2"/>
+            <Button x:Name="SaveAsPdfButton" Content="Zapisz do pdf" Margin="5" Click="SaveAsPdfButton_Click" Grid.Column="1"/>
+            <Button x:Name="CloseButton" Content="Zamknij" Margin="5" Grid.Column="2" Click="CloseButton_Click"/>
+            <Button x:Name="ClearButton" Content="Wyczyść" Margin="5" Grid.Column="3" Click="ClearButton_Click"/>
         </Grid>
     </Grid>
 </Window>

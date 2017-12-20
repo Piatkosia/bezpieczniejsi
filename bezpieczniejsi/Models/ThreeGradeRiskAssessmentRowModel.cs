@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bezpieczniejsi.Converters;
+using System;
 using System.Collections.Generic;
 
 namespace bezpieczniejsi
@@ -8,6 +9,11 @@ namespace bezpieczniejsi
         private ThreeStageRiskScoreVale _probability;
         public ThreeGradeRiskRowAssessmentModel()
         {
+            Headers = new List<string>()
+        {
+            "Id","Zagrożenie","Źródło zagrożenia","Możliwe skutki zagrożenia","Środki ochrony","Prawdopodonieństwo","Ciężkość następstw","Ryzyko",
+            "Dopuszczalność","Uwagi", //do zlokalizowania
+        };
             RecalculateRisk();
         }
 
@@ -33,10 +39,33 @@ namespace bezpieczniejsi
             }
         }
 
+        RiskThreeToReturnString conv1 = new RiskThreeToReturnString();
+        BoolToAcceptabilityTextConverter conv2 = new BoolToAcceptabilityTextConverter();
         public override List<string> GetPrintableParameters()
         {
-            return base.GetPrintableParameters();
+            List<string> parameters = new List<string>();
+            parameters.Add(Id.ToString());
+            parameters.Add(Threat);
+            parameters.Add(RiskSource);
+            parameters.Add(RiskEffects);
+            parameters.Add(PersonalProtection);
+            parameters.Add(conv1.Convert(ThreeProbability, null, null, null) as String);
+            parameters.Add(conv1.Convert(ConsequencesSeverity, null, null, null) as String);
+            parameters.Add(GetRiskText(Risk));
+            parameters.Add(conv2.Convert(Acceptability, null, null, null) as String);
+            parameters.Add(Comments);
+
+            return parameters;
         }
+
+        private string GetRiskText(int risk)
+        {
+            if (risk == 1) return " Małe ";
+            else if (risk == 2) return " Średnie ";
+            else if (risk == 3) return " Duże ";
+            else return " Błąd ";
+        }
+
         private void RecalculateRisk()
         {
 

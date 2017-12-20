@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiatToolkit", "PiatToolkit\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiatToolkitWPF", "PiatToolkitWPF\PiatToolkitWPF.csproj", "{CA691772-082B-4598-9BDA-46594E65A008}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bezpieczniejsi.Tests", "bezpieczniejsi.Tests\bezpieczniejsi.Tests.csproj", "{C71F2C3E-8236-4007-8A77-3EB3B353DF55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CA691772-082B-4598-9BDA-46594E65A008}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA691772-082B-4598-9BDA-46594E65A008}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA691772-082B-4598-9BDA-46594E65A008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C71F2C3E-8236-4007-8A77-3EB3B353DF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C71F2C3E-8236-4007-8A77-3EB3B353DF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C71F2C3E-8236-4007-8A77-3EB3B353DF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C71F2C3E-8236-4007-8A77-3EB3B353DF55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

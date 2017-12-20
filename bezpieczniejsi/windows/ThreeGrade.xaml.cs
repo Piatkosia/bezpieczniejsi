@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using PiatToolkitWPF;
 using System.Windows.Controls;
+using Microsoft.Win32;
 
 namespace bezpieczniejsi
 {
@@ -55,6 +56,32 @@ namespace bezpieczniejsi
             editor.ShowDialog();
             editor.Title = valueToRead.Header.CompanyName + " : " + valueToRead.Header.JobName;
             valueToRead.JobDescription = editor.EditedString;
+        }
+
+        private void SaveAsPdfButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog()
+            {
+                Filter = "PDF Files(*.pdf)|*.pdf|All(*.*)|*",
+
+            };
+
+            if (dialog.ShowDialog() == true)
+            {
+                RiskPdfGenerator gen = new RiskPdfGenerator();
+                gen.SaveAsPdf(valueToRead, dialog.FileName);
+            }
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            valueToRead = new ThreeGradeRa();
+            this.DataContext = valueToRead;
         }
     }
 }

@@ -19,6 +19,13 @@ namespace bezpieczniejsi.Converters
                 if (num == 2) return "Średnie";
                 if (num == 3) return "Duże";
             }
+            if (value is ThreeStageRiskScoreVale)
+            {
+                ThreeStageRiskScoreVale val = (ThreeStageRiskScoreVale)value;
+                if (val == ThreeStageRiskScoreVale.Rare) return "Małe";
+                if (val == ThreeStageRiskScoreVale.Medium) return "Średnie";
+                if (val == ThreeStageRiskScoreVale.Often) return "Duże";
+            }
             return value;
         }
 

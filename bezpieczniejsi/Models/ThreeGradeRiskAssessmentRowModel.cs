@@ -77,6 +77,7 @@ namespace bezpieczniejsi
             if (_probability == ThreeStageRiskScoreVale.Medium)
             {
                 Risk = 1 + (int)_consequencesSeverity;
+
             }
             if (_probability == ThreeStageRiskScoreVale.Often)
             {

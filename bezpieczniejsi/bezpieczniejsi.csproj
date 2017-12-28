@@ -62,18 +62,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\BoolToAcceptabilityTextConverter.cs" />
+    <Compile Include="Converters\RiskFiveToReturnString.cs" />
     <Compile Include="Converters\RiskThreeToReturnString.cs" />
     <Compile Include="Converters\RiskTreeValueToThreeStageRiskScoreValeConverter.cs" />
     <Compile Include="LoadingProvider.cs" />
+    <Compile Include="Models\FiveGradeRiskRowAssessmentModel.cs" />
     <Compile Include="Models\IRiskAssessment.cs" />
     <Compile Include="Models\RAHeader.cs" />
     <Compile Include="Models\RiskAssessment.cs" />
     <Compile Include="Models\RiskAssessmentRowModel.cs" />
-    <Compile Include="Models\ThreeGradeRA.cs" />
     <Compile Include="Models\ThreeGradeRiskAssessmentRowModel.cs" />
     <Compile Include="RiskBank.cs" />
     <Compile Include="RiskPdfGenerator.cs" />
     <Compile Include="TextfileLoader.cs" />
+    <Compile Include="Windows\FiveGrade.xaml.cs">
+      <DependentUpon>FiveGrade.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\RTFStringEditor.xaml.cs">
       <DependentUpon>RTFStringEditor.xaml</DependentUpon>
     </Compile>
@@ -92,6 +96,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\FiveGrade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\RTFStringEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

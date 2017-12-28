@@ -46,11 +46,17 @@ namespace bezpieczniejsi
         {
             this.Close();
         }
-        ThreeGradeRa TestRA = new ThreeGradeRa();
 
         private void ORZ_3s_click(object sender, RoutedEventArgs e)
         {
-            var wnd = new ThreeGrade(TestRA);
+            var wnd = new ThreeGrade(new RiskAssessment<ThreeGradeRiskRowAssessmentModel>());
+            wnd.Owner = this;
+            wnd.Show(); //na razie niech się sobie powtarza
+        }
+
+        private void ORZ_5s_click(object sender, RoutedEventArgs e)
+        {
+            var wnd = new FiveGrade(new RiskAssessment<FiveGradeRiskRowAssessmentModel>());
             wnd.Owner = this;
             wnd.Show(); //na razie niech się sobie powtarza
         }

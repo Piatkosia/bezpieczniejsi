@@ -109,12 +109,19 @@ namespace bezpieczniejsi
                 }
             }
         }
-        public List<string> Headers = new List<string>()
+        public virtual List<string> Headers
         {
-            "Id","Zagrożenie","","","","","","",
-            "","","","","","","","",
-            "","","","","","","","", //później tu się doda zależne od lokalizacji nazwy 
-        };
+            get
+            {
+                return _h;
+            }
+        }
+        private List<string> _h = new List<string>()
+                    {
+                        "Id","Zagrożenie","","","","","","",
+                        "","","","","","","","",
+                        "","","","","","","","", //później tu się doda zależne od lokalizacji nazwy 
+                    };
         private string _comments;
 
         public virtual List<string> GetPrintableParameters()

@@ -13,7 +13,9 @@ namespace bezpieczniejsi
 
         public virtual int GetChildID(object obj)
         {
-            throw new NotSupportedException("Ale użyj jakiejś konkretniejszej klasy");
+            if (obj == null) throw new NullReferenceException("obj is null:(");
+            if (obj is T) return IndexOf(obj as T);
+            else throw new NotSupportedException("Ale użyj jakiejś konkretniejszej klasy");
         }
 
 

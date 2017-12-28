@@ -13,6 +13,7 @@
             </MenuItem>
             <MenuItem Header="Ocena ryzyka">
                 <MenuItem Header="3 stopniowa" HorizontalAlignment="Left" Click="ORZ_3s_click"/>
+                <MenuItem Header="5 stopniowa" HorizontalAlignment="Left" Click="ORZ_5s_click"/>
             </MenuItem>
         </Menu>
     </Grid>

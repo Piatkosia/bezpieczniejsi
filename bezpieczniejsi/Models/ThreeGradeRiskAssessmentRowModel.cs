@@ -9,14 +9,24 @@ namespace bezpieczniejsi
         private ThreeStageRiskScoreVale _probability;
         public ThreeGradeRiskRowAssessmentModel()
         {
-            Headers = new List<string>()
+            PrepareData();
+        }
+        public override List<string> Headers
         {
-            "Id","Zagrożenie","Źródło zagrożenia","Możliwe skutki zagrożenia","Środki ochrony","Prawdopodonieństwo","Ciężkość następstw","Ryzyko",
-            "Dopuszczalność","Uwagi", //do zlokalizowania
+            get
+            {
+                return _h;
+            }
+        }
+        private List<string> _h = new List<string>()
+        {
+            " Id "," Zagrożenie "," Źródło zagrożenia "," Możliwe skutki zagrożenia "," Środki ochrony "," Prawdopodonieństwo "," Ciężkość następstw" ," Ryzyko ",
+            " Dopuszczalność " ," Uwagi ", //do zlokalizowania
         };
+        private void PrepareData()
+        {
             RecalculateRisk();
         }
-
         public override int PropNum
         {
             get
@@ -58,7 +68,7 @@ namespace bezpieczniejsi
             return parameters;
         }
 
-        private string GetRiskText(int risk)
+        protected virtual string GetRiskText(int risk)
         {
             if (risk == 1) return " Małe ";
             else if (risk == 2) return " Średnie ";
@@ -66,7 +76,7 @@ namespace bezpieczniejsi
             else return " Błąd ";
         }
 
-        private void RecalculateRisk()
+        protected virtual void RecalculateRisk()
         {
 
             if (_probability == ThreeStageRiskScoreVale.Rare)
@@ -87,7 +97,7 @@ namespace bezpieczniejsi
             RecalculateAcceptability();
         }
 
-        private void RecalculateAcceptability()
+        protected virtual void RecalculateAcceptability()
         {
             if (Risk >= 3) Acceptability = false;
             else Acceptability = true;

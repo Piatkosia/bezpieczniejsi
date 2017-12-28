@@ -11,8 +11,8 @@ namespace bezpieczniejsi
     /// </summary>
     public partial class ThreeGrade : Window
     {
-        private ThreeGradeRa valueToRead;
-        public ThreeGrade(ThreeGradeRa ra)
+        private RiskAssessment<ThreeGradeRiskRowAssessmentModel> valueToRead;
+        public ThreeGrade(RiskAssessment<ThreeGradeRiskRowAssessmentModel> ra)
         {
             valueToRead = ra;
             InitializeComponent();
@@ -30,6 +30,7 @@ namespace bezpieczniejsi
                 valueToRead.Header.JobName = args.NewValue;
 
         }
+
 
         private void Window_Activated(object sender, System.EventArgs e)
         {
@@ -54,31 +55,16 @@ namespace bezpieczniejsi
         {
             RTFStringEditor editor = new RTFStringEditor(valueToRead.JobDescription);
             editor.Owner = this;
-            editor.ShowDialog();
             editor.Title = $"{valueToRead.Header.CompanyName} : {valueToRead.Header.JobName}";
+            editor.ShowDialog();
             valueToRead.JobDescription = editor.EditedString;
         }
 
         private void SaveAsPdfButton_Click(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog()
-            {
-                Filter = "PDF Files(*.pdf)|*.pdf|All(*.*)|*",
-
-            };
-
-            if (dialog.ShowDialog() == true)
-            {
-                RiskPdfGenerator gen = new RiskPdfGenerator();
-                try
-                {
-                    gen.SaveAsPdf(valueToRead, dialog.FileName);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Błąd generowania {ex.Message}");
-                }
-            }
+            RiskPdfGenerator gen = new RiskPdfGenerator();
+            if (gen.SaveAsPdf(valueToRead)) MessageBox.Show("OK");
+            else MessageBox.Show("Error");
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -88,8 +74,9 @@ namespace bezpieczniejsi
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-            valueToRead = new ThreeGradeRa();
+            valueToRead = new RiskAssessment<ThreeGradeRiskRowAssessmentModel>();
             this.DataContext = valueToRead;
+            dataGrid.ItemsSource = valueToRead;
         }
     }
 }

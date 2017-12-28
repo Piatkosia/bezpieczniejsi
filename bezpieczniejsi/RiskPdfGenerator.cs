@@ -10,7 +10,7 @@ using Microsoft.Win32;
 
 namespace bezpieczniejsi
 {
-    class RiskPdfGenerator
+    public class RiskPdfGenerator
     {
         public bool SaveAsPdf<T>(RiskAssessment<T> Ra) where T : RiskAssessmentRowModel, new()
         {
@@ -38,7 +38,7 @@ namespace bezpieczniejsi
         public bool SaveAsPdf<T>(RiskAssessment<T> Ra, string path) where T : RiskAssessmentRowModel, new()
         {
             if (Ra == null || string.IsNullOrEmpty(path)) return false;
-            Document pdfDoc = new Document();
+            Document pdfDoc = new Document(iTextSharp.text.PageSize.A4.Rotate(), 10, 10, 10, 10);
             PdfWriter writer = PdfWriter.GetInstance(pdfDoc, new FileStream(path, FileMode.OpenOrCreate));
             if (writer == null) return false;
             BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1257, BaseFont.EMBEDDED);
@@ -47,7 +47,6 @@ namespace bezpieczniejsi
             Font normal_table_bold = new Font(bf_bold, 6f, Font.NORMAL, BaseColor.BLACK);
             Font normal_table = new Font(bf, 6f, Font.NORMAL, BaseColor.BLACK);
             pdfDoc.Open();
-            pdfDoc.SetPageSize(iTextSharp.text.PageSize.A4.Rotate());
             if (Ra.Header != null && !String.IsNullOrWhiteSpace(Ra.Header.JobName) && !String.IsNullOrWhiteSpace(Ra.Header.CompanyName))
                 pdfDoc.Add(new Paragraph(string.Format("Ocena ryzyka zawodowego dla stanowiska {0} w zakładzie {1}", Ra.Header.JobName, Ra.Header.CompanyName), normal)); //na razie - w dalszej kolejności umiędzynarodowić i zmienić na buildera
             if (!String.IsNullOrWhiteSpace(Ra.JobDescription))

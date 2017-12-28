@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA691772-082B-4598-9BDA-46594E65A008}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{8BC6D08E-81F9-4F5C-950C-3A3C0921DB72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PiatToolkitWPF</RootNamespace>
-    <AssemblyName>PiatToolkitWPF</AssemblyName>
+    <RootNamespace>bezpieczniejsi.wpf</RootNamespace>
+    <AssemblyName>bezpieczniejsi.wpf</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,14 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Printing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,13 +51,28 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DescTextBox.xaml.cs">
-      <DependentUpon>DescTextBox.xaml</DependentUpon>
+    <Compile Include="Windows\FiveGrade.xaml.cs">
+      <DependentUpon>FiveGrade.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EA\StringChangedEventArgs.cs" />
+    <Compile Include="Windows\RTFStringEditor.xaml.cs">
+      <DependentUpon>RTFStringEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ThreeGrade.xaml.cs">
+      <DependentUpon>ThreeGrade.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -76,8 +86,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="RiskAssesment.cs" />
-    <Compile Include="WpfPrinting.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,11 +100,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="App.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DescTextBox.xaml">
+    <Page Include="Windows\FiveGrade.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\RTFStringEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ThreeGrade.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -105,6 +121,10 @@
     <ProjectReference Include="..\bezpieczniejsi\bezpieczniejsi.csproj">
       <Project>{f859a8e3-6160-45b8-b985-fbdfe8a06b4e}</Project>
       <Name>bezpieczniejsi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PiatToolkitWPF\PiatToolkitWPF.csproj">
+      <Project>{ca691772-082b-4598-9bda-46594e65a008}</Project>
+      <Name>PiatToolkitWPF</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

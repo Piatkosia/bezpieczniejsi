@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace bezpieczniejsi
 {
-    class TextfileLoader: LoadingProvider
+    public class TextfileLoader : LoadingProvider
     {
         public RiskBank loadRisks(object source)
         {
@@ -15,7 +15,7 @@ namespace bezpieczniejsi
             {
                 Encoding code;
                 RiskBank bank = new RiskBank();
-                bank.Title = Path.GetFileNameWithoutExtension((string) source);
+                bank.Title = Path.GetFileNameWithoutExtension((string)source);
                 string line;
                 System.IO.StreamReader file =
                    new System.IO.StreamReader((string)source);

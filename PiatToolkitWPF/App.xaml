@@ -1,0 +1,12 @@
+﻿<Application x:Class="bezpieczniejsi.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <collections:ArrayList x:Key="Acceptability">
+            <collections:DictionaryEntry Key="Niedopuszczalne" Value="0"/>
+            <collections:DictionaryEntry Key="Dopuszczalne" Value="1"/>
+        </collections:ArrayList>
+    </Application.Resources>
+</Application>

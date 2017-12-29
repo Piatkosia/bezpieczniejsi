@@ -1,0 +1,61 @@
+﻿<Window x:Class="bezpieczniejsi.PHA"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bezpieczniejsi"
+        xmlns:convs="clr-namespace:bezpieczniejsi.Converters;assembly=bezpieczniejsi"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:piatToolkitWpf="clr-namespace:PiatToolkitWPF;assembly=PiatToolkitWPF"
+        mc:Ignorable="d" Activated="Window_Activated"
+        Title="PHA" Height="300" Width="700">
+    <Window.Resources>
+        <convs:BoolToAcceptabilityTextConverter x:Key="Acc"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="235*"/>
+            <RowDefinition Height="34*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <DataGrid x:Name="dataGrid" Margin="5" Grid.Row="2" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nr"  Binding="{Binding Path=Id}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Zagrożenie" Binding="{Binding Path=Threat}" />
+                <DataGridTextColumn Header="Źródło zagrożenia" Binding="{Binding Path=RiskSource}"/>
+                <DataGridTextColumn Header="Możliwe skutki zagrożenia" Binding="{Binding Path=RiskEffects}"/>
+                <DataGridTextColumn Header="Środki ochrony" Binding="{Binding Path=PersonalProtection}"/>
+                <DataGridComboBoxColumn Header="Wielkość szkody"  x:Name="Size" SelectedValueBinding="{Binding Path=Size, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Value" SelectedValuePath="Key" />
+                <!--Charakterystyczne dla metody-->
+                <DataGridComboBoxColumn Header="Prawdopodobieństwo powstania szkody" x:Name="Probability" SelectedValueBinding="{Binding Path=Probability, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Value" SelectedValuePath="Key"/>
+                <!--Charakterystyczne dla metody-->
+                <DataGridTextColumn Header="Ryzyko" IsReadOnly="True" Binding="{Binding Path=Risk}"/>
+                <DataGridTextColumn Header="Dopuszczalność" IsReadOnly="True"  Binding="{Binding Path=Acceptability, Converter={StaticResource Acc}}"/>
+                <DataGridTextColumn Header="Uwagi" Binding="{Binding Path=Comments}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa zakładu"  Grid.Row="0" Grid.Column="0" OutputChanged="DescTextBox_OutputChanged" x:Name="CompN"/>
+        <piatToolkitWpf:DescTextBox Margin="5" Input="Nazwa stanowiska" Grid.Row="0" Grid.Column="1" OutputChanged="DescTextBox_OutputChanged" x:Name="WorkN"/>
+        <Button x:Name="DescButton" Margin="5" Grid.Row="0" Grid.Column="2" Content=" Opis stanowiska" Click="DescButton_Click"/>
+        <Grid Grid.ColumnSpan="3" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+
+            </Grid.ColumnDefinitions>
+            <Button x:Name="PrintButton" Content="Drukuj" Margin="5" Click="PrintButton_Click"/>
+            <Button x:Name="SaveAsPdfButton" Content="Zapisz do pdf" Margin="5" Click="SaveAsPdfButton_Click" Grid.Column="1"/>
+            <Button x:Name="CloseButton" Content="Zamknij" Margin="5" Grid.Column="2" Click="CloseButton_Click"/>
+            <Button x:Name="ClearButton" Content="Wyczyść" Margin="5" Grid.Column="3" Click="ClearButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -76,7 +76,7 @@ namespace bezpieczniejsi
             else return " Błąd ";
         }
 
-        protected virtual void RecalculateRisk()
+        protected override void RecalculateRisk()
         {
 
             if (_probability == ThreeStageRiskScoreVale.Rare)
@@ -97,7 +97,7 @@ namespace bezpieczniejsi
             RecalculateAcceptability();
         }
 
-        protected virtual void RecalculateAcceptability()
+        protected override void RecalculateAcceptability()
         {
             if (Risk >= 3) Acceptability = false;
             else Acceptability = true;

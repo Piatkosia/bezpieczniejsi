@@ -60,5 +60,12 @@ namespace bezpieczniejsi
             wnd.Owner = this;
             wnd.Show(); //na razie niech się sobie powtarza
         }
+
+        private void ORZ_PHA_click(object sender, RoutedEventArgs e)
+        {
+            var wnd = new PHA(new RiskAssessment<PHARiskRowAssessmentModel>());
+            wnd.Owner = this;
+            wnd.Show(); //na razie niech się sobie powtarza
+        }
     }
 }

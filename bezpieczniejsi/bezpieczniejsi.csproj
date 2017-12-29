@@ -68,6 +68,7 @@
     <Compile Include="LoadingProvider.cs" />
     <Compile Include="Models\FiveGradeRiskRowAssessmentModel.cs" />
     <Compile Include="Models\IRiskAssessment.cs" />
+    <Compile Include="Models\PHARiskRowAssessmentModel.cs" />
     <Compile Include="Models\RAHeader.cs" />
     <Compile Include="Models\RiskAssessment.cs" />
     <Compile Include="Models\RiskAssessmentRowModel.cs" />

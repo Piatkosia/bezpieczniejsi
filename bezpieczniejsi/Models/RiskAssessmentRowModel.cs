@@ -146,8 +146,15 @@ namespace bezpieczniejsi
 
             }
         }
-
-
+        protected virtual void RecalculateRisk()
+        {
+            Risk = 0;
+            RecalculateAcceptability();
+        }
+        protected virtual void RecalculateAcceptability()
+        {
+            Acceptability = true;
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

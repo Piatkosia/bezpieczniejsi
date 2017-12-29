@@ -108,6 +108,7 @@ namespace bezpieczniejsi
             {
                 result[i] = (float)widths[i] / total * 100;
             }
+            result[result.Length - 1] *= 3; //uwagi z natury mogą być dłuższe
             return result;
         }
     }

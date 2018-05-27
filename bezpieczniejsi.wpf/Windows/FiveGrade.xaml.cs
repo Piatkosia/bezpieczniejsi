@@ -66,7 +66,7 @@ namespace bezpieczniejsi
             LoadHeaders();
         }
 
-        private void LoadHeaders()
+        protected void LoadHeaders()
         {
             CompN.Output = riskAssessment.Header.CompanyName;
             WorkN.Output = riskAssessment.Header.JobName;

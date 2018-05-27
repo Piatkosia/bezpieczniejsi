@@ -62,6 +62,13 @@
     <Compile Include="Windows\FiveGrade.xaml.cs">
       <DependentUpon>FiveGrade.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\FiveGradeInnerView.xaml.cs">
+      <DependentUpon>FiveGradeInnerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\FiveGradeWindow.cs" />
+    <Compile Include="Windows\OrzView.xaml.cs">
+      <DependentUpon>OrzView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PHA.xaml.cs">
       <DependentUpon>PHA.xaml</DependentUpon>
     </Compile>
@@ -110,6 +117,14 @@
     <Page Include="Windows\FiveGrade.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\FiveGradeInnerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OrzView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\PHA.xaml">
       <SubType>Designer</SubType>

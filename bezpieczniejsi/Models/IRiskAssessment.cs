@@ -15,5 +15,7 @@ namespace bezpieczniejsi
         /// <exception cref="ArgumentException">Throws when argument is invalid</exception>
         /// <exception cref="ArgumentNullException">Throws when argument is null</exception>
         int GetChildID(object obj);
+        RAHeader Header { get; set; }
+        string JobDescription { get; set; }
     }
 }

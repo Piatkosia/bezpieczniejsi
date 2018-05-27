@@ -72,6 +72,7 @@
     <Compile Include="Models\RAHeader.cs" />
     <Compile Include="Models\RiskAssessment.cs" />
     <Compile Include="Models\RiskAssessmentRowModel.cs" />
+    <Compile Include="Models\RiskScoreRiskRowAssessmentModel.cs" />
     <Compile Include="Models\ThreeGradeRiskAssessmentRowModel.cs" />
     <Compile Include="RiskBank.cs" />
     <Compile Include="RiskPdfGenerator.cs" />

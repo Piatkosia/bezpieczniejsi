@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using bezpieczniejsi.wpf.Windows;
 using Microsoft.Win32;
 
 namespace bezpieczniejsi
@@ -56,7 +57,7 @@ namespace bezpieczniejsi
 
         private void ORZ_5s_click(object sender, RoutedEventArgs e)
         {
-            var wnd = new FiveGrade(new RiskAssessment<FiveGradeRiskRowAssessmentModel>());
+            var wnd = new FiveGradeWindow(new RiskAssessment<FiveGradeRiskRowAssessmentModel>());
             wnd.Owner = this;
             wnd.Show(); //na razie niech się sobie powtarza
         }
